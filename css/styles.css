@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+
+:root{
+  --orange:#ff7a00;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  transition: all .2s linear;
+  text-decoration: none;
+  font-family:'Exo 2', sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow: hidden;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  background: #fff;
+  z-index: 100;
+  padding: 1rem 2rem;
+  box-shadow: 0.2rem .5rem rgba(0,0,0,.3)
+}
+
+.header .logo {
+  height: 5rem;
+}
+
+.header .logo img  {
+  height: 6rem;
+  margin-top: 0;
+
+}
+
+.header nav ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0; padding: 0;
+
+}
+
+.header nav ul li{
+ margin: 0 1.5rem;
+}
+
+.header nav ul li a{
+  font-size: 2rem;
+  color: #666;
+}
+
+.header nav ul li a:hover{
+  color:#000;
+  text-decoration: none;
+}
+
+.header .fa-bars{
+  font-size: 2.5rem;
+  color: #666;
+  cursor: pointer;
+  display:none;
+}
+
+
+.fa-times{
+  transform: rotate(180deg);
+}
+
+/*media queries*/
+
+
+@media(max-width:768px) {
+
+  html{
+    font-size: 50%;
+  }
+
+  .header .fa-bars{
+    display: block;
+  }
+
+  .header nav{
+    position: fixed;
+    top:6rem; right: -120%;
+    height:calc(100vh - 6rem);
+    width:100vw;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    border-top: .1rem solid rgba(0,0,0,.3);
+  }
+
+  .header nav ul{
+    height: 100%;
+    width:33rem;
+    background:#fff;
+    flex-flow: column;
+    justify-content: center;
+    float: right;
+  }
+
+  .header nav ul li{
+    margin:1rem 0;
+  }
+
+  .header nav ul li a{
+    display: block;
+    padding:.5rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    width:25rem;
+    border-radius: 5rem;
+    text-align: center;
+  }
+
+  .header nav ul li a:hover{
+    background:#333;
+    color:#fff;
+  }
+
+  .header .nav-toggle{
+    right: 0%;
+  }
+}
